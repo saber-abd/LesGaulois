@@ -22,33 +22,37 @@ public class Gaulois {
 	}
 	
 	private String prendreParole() {
-		return "Le Gaulois"+nom+":";
+		return "Le Gaulois "+nom+":";
 
 	}
 	
-	public void frapper(Romain romain) {
+	public void frapper(Romain romain ) {
 		System.out.println(nom+"envoie un grand coup dans la machoire de" + romain.getNom());
 		romain.recevoirCoup(force/3);
-
 	}
-	
 	
 	@Override
-//	public String toString() {
-//		return "Gaulois [nom=" + nom + ", force=" + force + ", effetPotion=" + effetPotion + "]";
-//	}
+	public String toString() {
+		return "Gaulois [nom=" + nom + ", force=" + force + ", effetPotion=" + effetPotion + "]";
+	}
+
+	
+	
 
 	public static void main(String[] args) {
+		System.out.println("debutGaulois");
+		Gaulois asterix;
+		asterix = new Gaulois("Astérix", 8);
+		System.out.println(asterix.getNom());
+		System.out.println(asterix.prendreParole());
+		asterix.parler("Bonjour");
+		Romain cesar;
+		cesar = new Romain("César", 7);
+		asterix.frapper(cesar);
 		
-		asterix (nom = "Astérix", force = 8)
-		System.out.println(asterix);
+		
 	}
 	
-	
-	
-	
-	
-	
-	
+
 	
 }
